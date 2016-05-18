@@ -1,348 +1,231 @@
 // JavaScript Document
 
 
-
 /*--------------Temperature ----------*/
-function setFahrToCelsius() {
-	document.getElementById("title").innerHTML = "Fahrenheit to Celsius";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = fahrenheitToCelsius;
+function setFahrenheitToCelsius() {
+	setConversion(arguments.callee);
 }
 
-function setCelsiusToFahr() {
-	document.getElementById("title").innerHTML = "Celsius to Fahrenheit";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = celsiusToFahrenheit;
+function setCelsiusToFahrenheit() {
+	setConversion(arguments.callee);
 }
 
-function setKelToCelsius() {
-	document.getElementById("title").innerHTML = "Kelvin to Celsius";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = kelvinToCelsius;	
+function setKelvinToCelsius() {
+	setConversion(arguments.callee);
 }
 
-function setCelsiusToKel() {
-	document.getElementById("title").innerHTML = "Celsius to Kelvin";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = celsiusToKelvin;
+function setCelsiusToKelvin() {
+	setConversion(arguments.callee);
 }
 
-function setKelToFahr() {
-	document.getElementById("title").innerHTML = "Kelvin to Fahrenheit";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = kelvinToFahrenheit;
+function setKelvinToFahrenheit() {
+	setConversion(arguments.callee);
 }
 
-function setFahrToKel() {
-	document.getElementById("title").innerHTML = "Fahrenheit to Kelvin";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = fahrenheitToKelvin;
+function setFahrenheitToKelvin() {
+	setConversion(arguments.callee);
 }
 /*--------------------------------*/
 
 /*--------------Weights ----------*/
 
 function setPoundsToGrams() {
-	document.getElementById("title").innerHTML = "Pounds to Grams";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = poundsToGrams;
+	setConversion(arguments.callee);
 }
 
 function setGramsToPounds() {
-	document.getElementById("title").innerHTML = "Grams to Pounds";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = gramsToPounds;
+	setConversion(arguments.callee);
 }
 
 function setPoundsToOunces() {
-	document.getElementById("title").innerHTML = "Pounds to Ounces";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = poundsToOunces;
+	setConversion(arguments.callee);
 }
 
 function setOuncesToPounds() {
-	document.getElementById("title").innerHTML = "Ounces to Pounds";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = ouncesToPounds;
+	setConversion(arguments.callee);
 }
 
 function setOuncesToGrams() {
-	document.getElementById("title").innerHTML = "Ounces to Grams";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = ouncesToGrams;
+	setConversion(arguments.callee);
 }
 
 function setGramsToOunces() {
-	document.getElementById("title").innerHTML = "Grams to Ounces";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = gramsToOunces;
+	setConversion(arguments.callee);
 }
 
 /*--------------------------------*/
 
 /*-------------Distance ----------*/
 function setMetersToInches() {
-	/*setConversion(arguments.callee.toString());*/
-	document.getElementById("title").innerHTML = "Meters to Inches";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = metersToInches;
+	setConversion(arguments.callee);
 }
 
 function setMetersToFeet() {
-	/*setConversion(arguments.callee.toString());*/
-	document.getElementById("title").innerHTML = "Meters to Feet";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = metersToFeet;
+	setConversion(arguments.callee);
 }
 
 function setMetersToYards() {
-	/*setConversion(arguments.callee.toString());*/
-	document.getElementById("title").innerHTML = "Meters to Yards";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = metersToYards;
+	setConversion(arguments.callee);
 }
 
 function setMetersToMiles() {
-	/*setConversion(arguments.callee.toString());*/
-	document.getElementById("title").innerHTML = "Meters to Miles";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = metersToMiles;
+	setConversion(arguments.callee);
 }
 
 function setMilesToMeters() {
-	//setConversion(arguments.callee.toString());
-	document.getElementById("title").innerHTML = "Miles to Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = milesToMeters;
+	setConversion(arguments.callee);
 }
 
 function setYardsToMeters() {
-	//setConversion(arguments.callee.toString());
-	document.getElementById("title").innerHTML = "Yards to Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yardsToMeters;
+	setConversion(arguments.callee);
 }
 
 function setFeetToMeters() {
-	//setConversion(arguments.callee.toString());
-	document.getElementById("title").innerHTML = "Feet to Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = feetToMeters;
+	setConversion(arguments.callee);
 }
 
 function setInchesToMeters() {
-	//setConversion(arguments.callee.toString());
-	document.getElementById("title").innerHTML = "Inches to Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = inchesToMeters;
+	setConversion(arguments.callee);
 }
 
 
 function setInchesToFeet() {
-	document.getElementById("title").innerHTML = "Inches to Feet";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = inchesToFeet;
+	setConversion(arguments.callee);
 }
 
 function setFeetToYards() {
-	document.getElementById("title").innerHTML = "Feet to Yards";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = feetToYards;
+	setConversion(arguments.callee);
 }
 
 function setFeetToMiles() {
-	document.getElementById("title").innerHTML = "Feet to Miles";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = feetToMiles;
+	setConversion(arguments.callee);
 }
 
 function setInchesToMiles() {
-	document.getElementById("title").innerHTML = "Inches to Miles";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = inchesToMiles;
+	setConversion(arguments.callee);
 }
 
 function setInchesToYards() {
-	document.getElementById("title").innerHTML = "Inches to Yards";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = inchesToYards;
+	setConversion(arguments.callee);
 }
 
 function setYardsToMiles() {
-	document.getElementById("title").innerHTML = "Yards to Miles";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yardsToMiles;
+	setConversion(arguments.callee);
 }
 
 function setKilometersToMiles() {
-	document.getElementById("title").innerHTML = "Kilometers to Miles";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = kilometersToMiles;
+	setConversion(arguments.callee);
 }
 
 function setFeetToInches() {
-	document.getElementById("title").innerHTML = "Feet to Inches";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = feetToInches;
+	setConversion(arguments.callee);
 }
 
 function setYardsToFeet() {
-	document.getElementById("title").innerHTML = "Yards to Feet";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yardsToFeet;
+	setConversion(arguments.callee);
 }
 
 function setMilesToFeet() {
-	document.getElementById("title").innerHTML = "Miles to Feet";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = milesToFeet;
+	setConversion(arguments.callee);
 }
 
 function setMilesToInches() {
-	document.getElementById("title").innerHTML = "Miles to Inches";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = milesToInches;
+	setConversion(arguments.callee);
 }
 
 function setYardsToInches() {
-	document.getElementById("title").innerHTML = "Yards to Inches";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yardsToInches;
+	setConversion(arguments.callee);
 }
 
 function setMilesToYards() {
-	document.getElementById("title").innerHTML = "Miles to Yards";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = milesToYards;
+	setConversion(arguments.callee);
 }
 
 function setMilesToKilometers() {
-	document.getElementById("title").innerHTML = "Miles to Kilometers";
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = milesToKilometers;
+	setConversion(arguments.callee);
 }
 
 
 /*--------------Time----------*/
 
-function setSecsToMinutes() {
-	document.getElementById("title").innerHTML = "Seconds to Minutes";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = secondsToMinutes;
+function setSecondsToMinutes() {
+	setConversion(arguments.callee);
 }
 
 function setMinutesToHours() {
-	document.getElementById("title").innerHTML = "Minutes to Hours";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = minutesToHours;
+	setConversion(arguments.callee);
 }
 
 function setHoursToDays() {
-	document.getElementById("title").innerHTML = "Hours to Days";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = hoursToDays;
+	setConversion(arguments.callee);
 }
 
 function setDaysToYears() {
-	document.getElementById("title").innerHTML = "Days to Years";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = daysToYears;
+	setConversion(arguments.callee);
 }
 
-function setSecsToHours() {
-	document.getElementById("title").innerHTML = "Seconds to Hours";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = secondsToHours;
+function setSecondsToHours() {
+	setConversion(arguments.callee);
 }
 
-function setSecsToDays() {
-	document.getElementById("title").innerHTML = "Seconds to Days";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = secondsToDays;
+function setSecondsToDays() {
+	setConversion(arguments.callee);
 }
 
-function setSecsToYears() {
-	document.getElementById("title").innerHTML = "Seconds to Years";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = secondsToYears;
+function setSecondsToYears() {
+	setConversion(arguments.callee);
 }
 
 function setMinutesToDays() {
-	document.getElementById("title").innerHTML = "Minutes to Days";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = minutesToDays;
+	setConversion(arguments.callee);
 }
 
 function setMinutesToYears() {
-	document.getElementById("title").innerHTML = "Minutes to Years";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = minutesToYears;
+	setConversion(arguments.callee);
 }
 
 function setHoursToYears() {
-	document.getElementById("title").innerHTML = "Hours to Years";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = hoursToYears;
+	setConversion(arguments.callee);
 }
 
 function setYearsToDays() {
-	document.getElementById("title").innerHTML = "Years to Days";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yearsToDays;
+	setConversion(arguments.callee);
 }
 
 function setDaysToHours() {
-	document.getElementById("title").innerHTML = "Days to Hours";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = daysToHours;
+	setConversion(arguments.callee);
 }
 
 function setHoursToMinutes() {
-	document.getElementById("title").innerHTML = "Hours to Minutes";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = hoursToMinutes;
+	setConversion(arguments.callee);
 }
 
 function setMinutesToSeconds() {
-	document.getElementById("title").innerHTML = "Minutes to Seconds";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = minutesToSeconds;
+	setConversion(arguments.callee);
 }
 
 function setYearsToHours() {
-	document.getElementById("title").innerHTML = "Years to Hours";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yearsToHours;
+	setConversion(arguments.callee);
 }
 
 function setYearsToMinutes() {
-	document.getElementById("title").innerHTML = "Years to Minutes";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yearsToMinutes;
+	setConversion(arguments.callee);
 }
 
 function setYearsToSeconds() {
-	document.getElementById("title").innerHTML = "Years to Seconds";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = yearsToSeconds;
+	setConversion(arguments.callee);
 }
 
 function setDaysToMinutes() {
-	document.getElementById("title").innerHTML = "Days to Minutes";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = daysToMinutes;
+	setConversion(arguments.callee);
 }
 
 function setDaysToSeconds() {
-	document.getElementById("title").innerHTML = "Days to Seconds";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = daysToSeconds;
+	setConversion(arguments.callee);
 }
 
 function setHoursToSeconds() {
-	document.getElementById("title").innerHTML = "Hours to Seconds";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = hoursToSeconds;
+	setConversion(arguments.callee);
 }
 
 /*-----------------------------*/
@@ -442,39 +325,27 @@ function setHeroFormula() {
 
 
 function setSquareMetersToSquareFeet() {
-	document.getElementById("title").innerHTML = "Square Meters to Square Feet";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareMetersToSquareFeet;
+	setConversion(arguments.callee);
 }
 
 function setSquareMetersToSquareYards() {
-	document.getElementById("title").innerHTML = "Square Meters to Square Yards";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareMetersToSquareYards;
+	setConversion(arguments.callee);
 }
 
 function setSquareFeetToSquareMeters() {
-	document.getElementById("title").innerHTML = "Square Feet to Square Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareFeetToSquareMeters;
+	setConversion(arguments.callee);
 }
 
 function setSquareFeetToSquareYards() {
-	document.getElementById("title").innerHTML = "Square Feet to Square Yards";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareFeetToSquareYards;
+	setConversion(arguments.callee);
 }
 
 function setSquareYardsToSquareFeet() {
-	document.getElementById("title").innerHTML = "Square Yards to Square Feet";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareYardsToSquareFeet;
+	setConversion(arguments.callee);
 }
 
 function setSquareYardsToSquareMeters() {
-	document.getElementById("title").innerHTML = "Square Yards to Square Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = squareYardsToSquareMeters;
+	setConversion(arguments.callee);
 }
 
 
@@ -482,51 +353,35 @@ function setSquareYardsToSquareMeters() {
 
 /*-------Angles------*/
 function setRadiansToDegrees() {
-	document.getElementById("title").innerHTML = "Radians to Degrees";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = radiansToDegrees;
+	setConversion(arguments.callee);
 }
 
 function setDegreesToRadians() {
-	document.getElementById("title").innerHTML = "Degrees to Radians";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = degreesToRadians;
+	setConversion(arguments.callee);
 }
 
 
 /*-------Volume------*/
 function setCubicMetersToCubicFeet() {
-	document.getElementById("title").innerHTML = "Cubic Meters to Cubic Feet";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicMetersToCubicFeet;
+	setConversion(arguments.callee);
 }
 
 function setCubicMetersToCubicYards() {
-	document.getElementById("title").innerHTML = "Cubic Meters to Cubic Yards";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicMetersToCubicYards;
+	setConversion(arguments.callee);
 }
 
 function setCubicFeetToCubicMeters() {
-	document.getElementById("title").innerHTML = "Cubic Feet to Cubic Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicFeetToCubicMeters;
+	setConversion(arguments.callee);
 }
 
 function setCubicFeetToCubicYards() {
-	document.getElementById("title").innerHTML = "Cubic Feet to Cubic Yards";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicFeetToCubicYards;
+	setConversion(arguments.callee);
 }
 
 function setCubicYardsToCubicFeet() {
-	document.getElementById("title").innerHTML = "Cubic Yards to Cubic Feet";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicYardsToCubicFeet;
+	setConversion(arguments.callee);
 }
 
 function setCubicYardsToCubicMeters() {
-	document.getElementById("title").innerHTML = "Cubic Yards to Cubic Meters";	
-	document.getElementById("output").innerHTML = "";
-	document.getElementById("button").onclick = cubicYardsToCubicMeters;
+	setConversion(arguments.callee);
 }

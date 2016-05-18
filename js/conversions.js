@@ -175,7 +175,7 @@ function secondsToYears() {
     var input = document.getElementById('input1').value;
     var parsedInput = parseInt(input);
 
-    var converted = parsedInput / (3.17098 * Math.pow(10,-8));
+    var converted = parsedInput * (3.17098 * Math.pow(10,-8));
 	converted = converted.toFixed(2);
 	document.getElementById("output").innerHTML = converted + " years";
 }
@@ -781,7 +781,7 @@ function squareMetersToSquareFeet() {
 
     var converted = parsedInput * 10.7639;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " ft<sup>2</sup>";
 }
 
 function squareMetersToSquareYards() {
@@ -790,7 +790,7 @@ function squareMetersToSquareYards() {
 
     var converted = parsedInput * 1.19599;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " yd<sup>2</sup>";
 }
 
 function squareFeetToSquareMeters() {
@@ -799,7 +799,7 @@ function squareFeetToSquareMeters() {
 
     var converted = parsedInput * 0.092903;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " m<sup>2</sup>";
 }
 
 function squareFeetToSquareYards() {
@@ -808,7 +808,7 @@ function squareFeetToSquareYards() {
 
     var converted = parsedInput * 0.111111;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " yd<sup>2</sup>";
 }
 
 function squareYardsToSquareFeet() {
@@ -817,7 +817,7 @@ function squareYardsToSquareFeet() {
 
     var converted = parsedInput * 9;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " ft<sup>2</sup>";
 }
 
 function squareYardsToSquareMeters() {
@@ -826,7 +826,7 @@ function squareYardsToSquareMeters() {
 
     var converted = parsedInput * 0.836127;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " m<sup>2</sup>";
 }
 
 
@@ -838,7 +838,7 @@ function radiansToDegrees() {
 
     var converted = (180/Math.PI) * parsedInput;
 converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + "&deg;";
 }
 
 function degreesToRadians() {
@@ -847,7 +847,7 @@ function degreesToRadians() {
 
     var converted = (Math.PI/180) * parsedInput;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " radians";
 }
 
 // Volume Formulas
@@ -940,7 +940,7 @@ function cubicMetersToCubicFeet() {
 
     var converted = parsedInput * 35.3147;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " ft<sup>3</sup>";
 }
 
 function cubicMetersToCubicYards() {
@@ -949,7 +949,7 @@ function cubicMetersToCubicYards() {
 
     var converted = parsedInput * 1.30795;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " yd<sup>3</sup>";
 }
 
 function cubicFeetToCubicMeters() {
@@ -958,7 +958,7 @@ function cubicFeetToCubicMeters() {
 
     var converted = parsedInput * 0.0283168;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " m<sup>3</sup>";
 }
 
 function cubicFeetToCubicYards() {
@@ -967,7 +967,7 @@ function cubicFeetToCubicYards() {
 
     var converted = parsedInput * 0.037037;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " yd<sup>3</sup>";
 }
 
 function cubicYardsToCubicFeet() {
@@ -976,7 +976,7 @@ function cubicYardsToCubicFeet() {
 
     var converted = parsedInput * 27;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " ft<sup>3</sup>";
 }
 
 function cubicYardsToCubicMeters() {
@@ -985,7 +985,7 @@ function cubicYardsToCubicMeters() {
 
     var converted = parsedInput * 0.764555;
 	converted = converted.toFixed(2);
-	document.getElementById('output').innerHTML = converted;
+	document.getElementById('output').innerHTML = converted + " m<sup>3</sup>";
 }
 
 
