@@ -111,7 +111,7 @@ function gramsToOunces() {
 
     var converted = parsedInput / 437.5;
 	converted = converted.toFixed(2);
-	document.getElementById("output").innerHTML = converted + " grams";
+	document.getElementById("output").innerHTML = converted + " ounces";
 }
 
 // Time Conversions
