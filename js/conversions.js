@@ -109,7 +109,7 @@ function gramsToOunces() {
     var input = document.getElementById('input1').value;
     var parsedInput = parseInt(input);
 
-    var converted = parsedInput / 437.5;
+    var converted = parsedInput * 0.035274;
 	converted = converted.toFixed(2);
 	document.getElementById("output").innerHTML = converted + " ounces";
 }
