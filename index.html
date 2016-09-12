@@ -2,516 +2,95 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Convertr</title>
 
+<!-- JS Libraries -->
+<script src="js/libs/jquery-2.2.3.min.js"></script>
+<script src="js/libs/materialize.min.js"></script>
+<script src="js/libs/angular-1.48.min.js"></script>
+<script src="js/libs/angular-1.48-route.min.js"></script>
+<script src="js/libs/math-3.5.0.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- AngularJS Components -->
+<script src="js/modules/convertr.js"></script>
+<script src="js/routes/routes.js"></script>
+<script src="js/services/materializeInput.js"></script>
+<script src="js/filters/filters.js"></script>
+<script src="js/controllers/InitSelect.js"></script>
+<script src="js/controllers/TempConversion.js"></script>
+<script src="js/controllers/WeightMassConversion.js"></script>
+<script src="js/controllers/TimeConversion.js"></script>
+<script src="js/controllers/DistanceConversion.js"></script>
+<script src="js/controllers/SpeedVelocityConversion.js"></script>
+<script src="js/controllers/AreaConversion.js"></script>
+<script src="js/controllers/VolumeConversion.js"></script>
+
+<!-- Page Styles -->
 <link rel="stylesheet" href="css/materialize.min.css">
-<script src="js/materialize.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
-
-<body>
+<body ng-app="convertrApp">
 <nav class="teal">
-	<div class="nav-wrapper"> <a href="#!" class="brand-logo left">Convert.r</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">&#xE5D2;</i></a>
+	<div class="nav-wrapper"> <a class="brand-logo left">Convert.r</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">&#xE5D2;</i></a>
 		<ul class="side-nav fixed" id="mobile-demo">
-      		<ul class="collapsible" data-collapsed="accordion">
-      			<!--TEMPARATURE LI-->
-                <li>
-                    <!--TEMPERATURE-HEADER-->
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-							<i class="material-icons">ac_unit</i>
-							<i class="material-icons right small dropdown-ic">keyboard_arrow_down</i>Temperature
-                        </span>
-                    </div>
-                    <!--TEMPERATURE LIST-->
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setCelsiusToFahrenheit()">
-                                <li>Celsius to Fahrenheit</li>
-                            </a>
-                            <a onClick="setCelsiusToKelvin()">
-                                <li>Celsius to Kelvin</li>
-                            </a>
-                            <a onClick="setFahrenheitToCelsius()">
-                                <li>Fahrenheit to Celsius</li>
-                            </a>
-                            <a onClick="setFahrenheitToKelvin()">
-                                <li>Fahrenheit to Kelvin</li>
-                            </a>
-                            <a onClick="setKelvinToCelsius()">
-                                <li>Kelvin to Celsius</li>
-                            </a>
-                            <a onClick="setKelvinToFahrenheit()">
-                                <li>Kelvin to Fahrenheit</li>
-                            </a>
-                        </ul>
-                  </div>
-                </li>
-
-                <!--WEIGHT/MASS LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">fitness_center</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Weight/Mass
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setGramsToOunces()">
-                                <li>Grams to Ounces</li>
-                            </a>
-                            <a onClick="setGramsToPounds()">
-                                <li>Grams to Pounds</li>
-                            </a>
-                            <a onClick="setOuncesToGrams()">
-                                <li>Ounces to Grams</li>
-                            </a>
-                            <a onClick="setOuncesToPounds()">
-                                <li>Ounces to Pounds</li>
-                            </a>
-                            <a onClick="setPoundsToGrams()">
-                                <li>Pounds to Grams</li>
-                            </a>
-                            <a onClick="setPoundsToOunces()">
-                                <li>Pounds to Ounces</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
-
-                <!--TIME LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">watch_later</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Time
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setSecondsToMinutes()">
-                                <li>Seconds to Minutes</li>
-                            </a>
-                            <a onClick="setSecondsToHours()">
-                                <li>Seconds to Hours</li>
-                            </a>
-                            <a onClick="setSecondsToDays()">
-                                <li>Seconds to Days</li>
-                            </a>
-                            <a onClick="setSecondsToYears()">
-                                <li>Seconds to Years</li>
-                            </a>
-                            <a onClick="setMinutesToSeconds()">
-                                <li>Minutes to Seconds</li>
-                            </a>
-                            <a onClick="setMinutesToHours()">
-                                <li>Minutes to Hours</li>
-                            </a>
-                            <a onClick="setMinutesToDays()">
-                                <li>Minutes to Days</li>
-                            </a>
-                            <a onClick="setMinutesToYears()">
-                                <li>Minutes to Years</li>
-                            </a>
-                            <a onClick="setHoursToSeconds()">
-                                <li>Hours to Seconds</li>
-                            </a>
-                            <a onClick="setHoursToMinutes()">
-                                <li>Hours to Minutes</li>
-                            </a>
-                            <a onClick="setHoursToDays()">
-                                <li>Hours to Days</li>
-                            </a>
-                            <a onClick="setHoursToYears()">
-                                <li>Hours to Years</li>
-                            </a>
-                            <a onClick="setDaysToSeconds()">
-                                <li>Days to Seconds</li>
-                            </a>
-                            <a onClick="setDaysToMinutes()">
-                                <li>Days to Minutes</li>
-                            </a>
-                            <a onClick="setDaysToHours()">
-                                <li>Days to Hours</li>
-                            </a>
-                            <a onClick="setDaysToYears()">
-                                <li>Days to Years</li>
-                            </a>
-                            <a onClick="setYearsToSeconds()">
-                                <li>Years to Seconds</li>
-                            </a>
-                            <a onClick="setYearsToMinutes()">
-                                <li>Years to Minutes</li>
-                            </a>
-                            <a onClick="setYearsToHours()">
-                                <li>Years to Hours</li>
-                            </a>
-                            <a onClick="setYearsToDays()">
-                                <li>Years to Days</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
-
-                <!--LENGTH/DISTANCE LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">keyboard_tab</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Distance
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setInchesToFeet()">
-                                <li>Inches to Feet</li>
-                            </a>
-                            <a onClick="setInchesToMiles()">
-                                <li>Inches to Miles</li>
-                            </a>
-                            <a onClick="setInchesToYards()">
-                                <li>Inches to Yards</li>
-                            </a>
-                            <a onClick="setInchesToMeters()">
-                                <li>Inches to Meters</li>
-                            </a>
-                            <a onClick="setFeetToInches()">
-                                <li>Feet to Inches</li>
-                            </a>
-                            <a onClick="setFeetToYards()">
-                                <li>Feet to Yards</li>
-                            </a>
-                            <a onClick="setFeetToMiles()">
-                                <li>Feet to Miles</li>
-                            </a>
-                            <a onClick="setFeetToMeters()">
-                                <li>Feet to Meters</li>
-                            </a>
-                            <a onClick="setMilesToInches()">
-                                <li>Miles to Inches</li>
-                            </a>
-                            <a onClick="setMilesToFeet()">
-                                <li>Miles to Feet</li>
-                            </a>
-                            <a onClick="setMilesToYards()">
-                                <li>Miles to Yards</li>
-                            </a>
-                            <a onClick="setMilesToMeters()">
-                                <li>Miles to Meters</li>
-                            </a>
-                            <a onClick="setMilesToKilometers()">
-                                <li>Miles to Kilometers</li>
-                            </a>
-                            <a onClick="setYardsToInches()">
-                                <li>Yards to Inches</li>
-                            </a>
-                            <a onClick="setYardsToFeet()">
-                                <li>Yards to Feet</li>
-                            </a>
-                            <a onClick="setYardsToMiles()">
-                                <li>Yards to Miles</li>
-                            </a>
-                            <a onClick="setYardsToMeters()">
-                                <li>Yards to Meters</li>
-                            </a>
-                        	<a onClick="setMetersToInches()">
-                                <li>Meters to Inches</li>
-                            </a>
-                            <a onClick="setMetersToFeet()">
-                                <li>Meters to Feet</li>
-                            </a>
-                            <a onClick="setMetersToYards()">
-                                <li>Meters to Yards</li>
-                            </a>
-                            <a onClick="setMetersToMiles()">
-                                <li>Meters to Miles</li>
-                            </a>
-                            <a onClick="setKilometersToMiles()">
-                                <li>Kilometers to Miles</li>
-                            </a>
-
-                        <!-- -->
-
-                        </ul>
-                    </div>
-                </li>
-
-                <!--SPEED/VELOCITY LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">flash_on</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Speed/Velocity
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="msToMph()">
-                                <li>Meters/sec to MPH</li>
-                            </a>
-                            <a onClick="msToKmh()">
-                                <li>Meters/sec to KmPH</li>
-                            </a>
-                            <a onClick="msToKnots()">
-                                <li>Meters/sec to Knots</li>
-                            </a>
-                            <a onClick="msToFtPerSec()">
-                                <li>Meters/sec to Feet/sec</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
-
-                <!--ANGLES LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">signal_cellular_4_bar</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Angles
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setRadiansToDegrees()">
-                                <li>Radians to Degrees</li>
-                            </a>
-                            <a onClick="setDegreesToRadians()">
-                                <li>Degrees to Radians</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
-
-                <!--AREA LI-old-->
-               <!-- <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">format_shapes</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Area
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setAreaOfSq()">
-                                <li>Area of Square</li>
-                            </a>
-                            <a onClick="setAreaOfRect()">
-                                <li>Area of Rectangle</li>
-                            </a>
-                            <a onClick="setAreaOfPara()">
-                                <li>Area of Parallelogram</li>
-                            </a>
-                            <a onClick="setAreaOfATrap()">
-                                <li>Area of a Trapezoid</li>
-                            </a>
-                            <a onClick="setAreaOfCirc()">
-                                <li>Area of a circle</li>
-                            </a>
-                            <a onClick="setAreaOfEllip()">
-                                <li>Area of an Ellipse</li>
-                            </a>
-                            <a onClick="setAreaOfTri()">
-                                <li>Area of a Triangle</li>
-                            </a>
-                            <a onClick="setAreaOfEquiTri()">
-                                <li>Area of Equilateral Triangle</li>
-                            </a>
-                            <a onClick="setAreaOfSec()">
-                                <li>Area of a Sector</li>
-                            </a>
-                            <a onClick="setHeroFormula()">
-                                <li>Heron's Formula</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li> -->
-
-                <!--AREA LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">format_shapes</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Area
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setSquareMetersToSquareFeet()">
-                                <li>Sq. Meters to Sq. Feet</li>
-                            </a>
-                            <a onClick="setSquareMetersToSquareYards()">
-                                <li>Sq. Meters to Sq. Yards</li>
-                            </a>
-                            <a onClick="setSquareFeetToSquareMeters()">
-                                <li>Sq. Feet to Sq. Meters</li>
-                            </a>
-                            <a onClick="setSquareFeetToSquareYards()">
-                                <li>Sq. Feet to Sq. Yards</li>
-                            </a>
-                            <a onClick="setSquareYardsToSquareFeet()">
-                                <li>Sq. Yards to Sq. Feet</li>
-                            </a>
-                            <a onClick="setSquareYardsToSquareMeters()">
-                                <li>Sq. Yards to Sq. Meters</li>
-                            </a>
-
-                        </ul>
-                    </div>
-                </li>
-
-                <!--VOLUME LI-old-->
-             <!--   <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">tonality</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Volume
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="#">
-                                <li>Fahrenheit to Celsius</li>
-                            </a>
-                            <a onClick="#">
-                                <li>Celsius to Fahrenheit</li>
-                            </a>
-                            <a onClick="#">
-                                <li>Kelvin to Celsius</li>
-                            </a>
-                            <a onClick="#">
-                                <li>Celsius to Kelvin</li>
-                            </a>
-                            <a onClick="#">
-                                <li>Kelvin to Fahrenheit</li>
-                            </a>
-                            <a onClick="#">
-                                <li>Fahrenheit to Kelvin</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li> -->
-
-                <!--VOLUME LI-->
-                <li>
-                    <div class="collapsible-header black-text collapse no-wrap">
-                        <span>
-                          <i class="material-icons">tonality</i>
-                          <i class="material-icons right dropdown-ic small">keyboard_arrow_down</i>Volume
-                        </span>
-                    </div>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <a onClick="setCubicMetersToCubicFeet()">
-                                <li>Cb. Meters to Cb. Feet</li>
-                            </a>
-                            <a onClick="setCubicMetersToCubicYards()">
-                                <li>Cb. Meters to Cb. Yards</li>
-                            </a>
-                            <a onClick="setCubicFeetToCubicMeters()">
-                                <li>Cb. Feet to Cb. Meters</li>
-                            </a>
-                            <a onClick="setCubicFeetToCubicYards()">
-                                <li>Cb. Feet to Cb. Yards</li>
-                            </a>
-                            <a onClick="setCubicYardsToCubicFeet()">
-                                <li>Cb. Yards to Cb. Feet</li>
-                            </a>
-                            <a onClick="setCubicYardsToCubicMeters()">
-                                <li>Cb. Yards to Cb. Meters</li>
-                            </a>
-                        </ul>
-                    </div>
-                </li>
-
-			</ul><!--accordion-->
+			<!-- Temperature -->
+      <li>            
+        <a href="#/temp" class="black-text">
+					<i class="material-icons left">ac_unit</i> Temperature
+        </a>
+      </li>
+			<!-- Weight/Mass -->
+      <li>            
+        <a href="#/weight-mass" class="black-text">
+					<i class="material-icons left">fitness_center</i> Weight/Mass
+        </a>
+      </li>
+			<!-- Time -->
+      <li>            
+        <a href="#/time" class="black-text">
+					<i class="material-icons left">watch_later</i> Time
+        </a>
+      </li>   
+			<!-- Distance -->
+      <li>            
+        <a href="#/distance" class="black-text">
+					<i class="material-icons left">keyboard_tab</i> Distance
+        </a>
+      </li>      
+			<!-- Speed/Velocity -->
+      <li>            
+        <a href="#/speed-velocity" class="black-text">
+					<i class="material-icons left">flash_on</i> Speed/Velocity
+        </a>
+      </li>  
+			<!-- Area -->
+      <li>            
+        <a href="#/area" class="black-text">
+					<i class="material-icons left">format_shapes</i> Area
+        </a>
+      </li>  
+			<!-- Volume -->
+      <li>            
+        <a href="#/volume" class="black-text">
+					<i class="material-icons left">tonality</i> Volume
+        </a>
+      </li>            
     	</ul><!--sidenav-->
 	</div>
 </nav>
 
-<div class="container main">
-  <div class="row">
-    <div class="col s12">
-      <!-- title -->
-      <h4 id="title" class="center-align">Fahrenheit to Celsius</h4>
-    </div>
-    <div class="col s6 offset-s3">
-      <!--take user input -->
-      <input class="center-text form-control" type="number" id="input1"/>
+<div class="main" ng-view></div>
 
-      <div id="input2-div">
-
-      </div>
-      <div class="btn-wrapper">
-        <button id="button" class="waves-effect waves-light btn valign" value="click" onclick="fahrenheitToCelsius()">Convert</button>
-      </div>
-    </div>
-    <div class="col s12">
-      <h1 id="output" class="center-align"></h1>
-    </div>
-  </div>
-</div>
-<script src="js/setFunctions.js"></script>
-<script src="js/conversions.js"></script>
 
 <script type="text/javascript">
-	function setConversion(functionName){
-		functionName = functionName.toString().substr('function '.length);
-	   functionName = functionName.substr(0, functionName.indexOf('('));
-		var description = functionName.substr(3);
-		var descriptionWords = description.split(/(?=[A-Z])/);
-		functionName = functionName.substr(3);
-		functionName = functionName.substr(0,1).toLowerCase() +  functionName.substr(1) + "()";
-		description = "";
-		for(i in descriptionWords){
-			description += descriptionWords[i] + " ";
-		}
-		$("#title").text(description);
-		$("#output").text("");
-		$("#button").attr('onclick', functionName);
-	};
-
 
 	$(document).ready(function() {
 		//Imported materialize framework functions for the side nav bar
 		$(".button-collapse").sideNav();
-		$('.collapsible').collapsible({});
-
-		//Animate dropdown arrow
-		$(".collapse").click(function(){
-			//Set all elements in collapse class, excluding the clicked element, to arrow down
-			$(".collapse").not(this).find("i:last").text('keyboard_arrow_down');
-			//If the clicked element is arrow down, then switch it
-			if($(this).find("i:last").text() == 'keyboard_arrow_down'){
-				$(this).find("i:last").text('keyboard_arrow_up');
-			}
-			//If the clicked element is arrow up, then switch it
-			else if($(this).find("i:last").text() == 'keyboard_arrow_up'){
-				$(this).find("i:last").text('keyboard_arrow_down');
-			}
-		});
-
-		//Enter key functionality
-		$("#input1").keyup(function(event){
-			if(event.keyCode == 13){
-				$("#button").click();
-			}
-		});
-
 	});
+
 </script>
 </body>
 </html>

@@ -2,20 +2,19 @@
 /* CSS Document */
 
 body {
-
-
+	font-family: 'Roboto';
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(../iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+       url(../iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
@@ -48,8 +47,9 @@ body {
 }
 
 .main {
-	margin-left:25vw;
-	margin-top: 25vh;
+	margin:auto;
+	margin-top: 5vh;
+	padding-left: 240px;
 }
 
 nav {
@@ -90,6 +90,14 @@ div.collapsible-header.black-text.collapse.no-wrap {
 
 }
 
+.main .title{
+	padding-bottom: 8vh;
+}
+
+
+#tempInput{
+	width: 70%;
+}
 
 
 @media screen and (max-width:992px){
@@ -99,8 +107,33 @@ div.collapsible-header.black-text.collapse.no-wrap {
 
 .main {
 	margin:auto;
-	margin-top:25vh;
+	margin-top:10vh;
 	text-align:center;
+	padding-left: 0px;
 }
 
+#title{
+	line-height: 1.1;
+}
+
+.main .title {
+  padding-bottom: 8vh;
+}
+
+}
+
+@media screen and (max-width:776px){
+
+.main {
+	margin-top:5vh;
+}
+
+#title{
+	line-height: 1.4;
+}
+
+.main .title {
+  padding-bottom: 2vh;
+}
+	
 }
