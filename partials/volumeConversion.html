@@ -4,7 +4,7 @@
     <h2 id="title" class="center-align">Volume Conversion</h2>  	 		 
   </div>
   <!-- Units To Convert From -->  
-  <div class="col l2 offset-l4 s6 offset-s3 center input-field">      
+  <div class="col l3 offset-l3 s6 offset-s3 center input-field">      
     <select id="unitsFrom" ng-model="unitsFrom" ng-change="checkInput();resetSelect();setExponentInput();">    
        <option value="" disabled selected>Choose your option</option> 
        <option value="{{x.mathjsLabel}}" ng-repeat="x in volumeUnits">{{x.name}}</option>   						
@@ -12,14 +12,14 @@
     <label for="unitsFrom">Units From:</label>
   </div>	
   <!-- Units To Convert To -->  
-  <div class="col l2 s6 offset-s3 center input-field">
+  <div class="col l3 s6 offset-s3 center input-field">
     <select id="unitsTo" ng-model="unitsTo" ng-change="enableInput();resetSelect();" disabled>
        <option value="{{x.mathjsLabel}}" ng-repeat="x in volumeUnits | filter:'!'+unitsFrom : true">{{x.name}}</option>   						
     </select>  	 		 
     <label for="unitsTo">Units To:</label>      
   </div>
   <!-- Numerical & Exponent Input -->  
-  <div class="col l2 offset-l5 s4 offset-s4 center">
+  <div class="col l4 offset-l4 s4 offset-s4 center">
   	<div class="row">
 	  	<div class="col l6 s12 center input-field">
     		<input id="coefficientInput" class="center-text form-control main-input" type="number" ng-model="coefficientInput" ng-change="checkInput();" disabled/>     
