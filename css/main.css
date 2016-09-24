@@ -1,8 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html{
+	font-size: 16px;
+}
+
 body {
-	font-family: 'Roboto';
+	font-family: 'Titillium Web', 'Roboto', 'Georgia', sans-serif;
 }
 
 .brand-logo {
@@ -40,7 +44,7 @@ nav {
 }
 
 .material-icons.small {
-	font-size:18px;
+	font-size:1.125rem;
 }
 
 .no-wrap {
